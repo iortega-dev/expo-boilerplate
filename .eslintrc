@@ -1,3 +1,7 @@
 {
-	"extends": "react-native-typescript"
+	"extends": "react-native-typescript",
+	"rules": {
+		"react/jsx-uses-react": "off",
+		"react/react-in-jsx-scope": "off"
+	}
 }
