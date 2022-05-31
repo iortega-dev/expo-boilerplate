@@ -10,6 +10,9 @@ import {
 	VStack,
 } from 'native-base';
 
+import { Provider } from 'react-redux';
+import { store } from './store/store';
+
 const MyComponent = (): JSX.Element => (
 	<Center px={4} flex={1}>
 		<VStack space={5} alignItems="center">
@@ -51,9 +54,11 @@ export const theme = extendTheme({ config });
 
 const App = (): JSX.Element => {
 	return (
-		<NativeBaseProvider theme={theme}>
-			<MyComponent />
-		</NativeBaseProvider>
+		<Provider store={store}>
+			<NativeBaseProvider theme={theme}>
+				<MyComponent />
+			</NativeBaseProvider>
+		</Provider>
 	);
 };
 
