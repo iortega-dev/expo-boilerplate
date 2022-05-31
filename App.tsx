@@ -1,47 +1,8 @@
-import {
-	Box,
-	Center,
-	extendTheme,
-	Heading,
-	HStack,
-	Link,
-	NativeBaseProvider,
-	Text,
-	VStack,
-} from 'native-base';
+import { extendTheme, NativeBaseProvider } from 'native-base';
 
 import { Provider } from 'react-redux';
+import Navigation from './navigation';
 import { store } from './store/store';
-
-const MyComponent = (): JSX.Element => (
-	<Center px={4} flex={1}>
-		<VStack space={5} alignItems="center">
-			<Heading size="lg">Welcome to NativeBase</Heading>
-			<HStack space={2} alignItems="center">
-				<Text>Edit</Text>
-				<Box
-					_web={{
-						_text: {
-							fontFamily: 'monospace',
-							fontSize: 'sm',
-						},
-					}}
-					px={2}
-					py={1}
-					bg="blueGray.200"
-				>
-					App.js
-				</Box>
-				<Text>and save to reload.</Text>
-			</HStack>
-			<Link href="https://docs.nativebase.io" isExternal>
-				<Text color="primary.500" underline fontSize={'xl'}>
-					Learn NativeBase
-				</Text>
-			</Link>
-		</VStack>
-	</Center>
-);
 
 // Define the config
 const config = {
@@ -56,7 +17,7 @@ const App = (): JSX.Element => {
 	return (
 		<Provider store={store}>
 			<NativeBaseProvider theme={theme}>
-				<MyComponent />
+				<Navigation />
 			</NativeBaseProvider>
 		</Provider>
 	);
