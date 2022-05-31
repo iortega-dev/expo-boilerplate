@@ -11,6 +11,8 @@
 	},
 	"dependencies": {
 		"@native-base/icons": "^0.0.11",
+		"@react-navigation/native": "^6.0.10",
+		"@react-navigation/native-stack": "^6.6.2",
 		"@reduxjs/toolkit": "^1.8.2",
 		"eslint-config-react-native-typescript": "^2.2.6",
 		"expo": "~45.0.0",
@@ -20,6 +22,7 @@
 		"react-dom": "17.0.2",
 		"react-native": "0.68.2",
 		"react-native-safe-area-context": "4.2.4",
+		"react-native-screens": "~3.11.1",
 		"react-native-svg": "12.3.0",
 		"react-native-web": "0.17.7",
 		"react-redux": "^8.0.2"
@@ -36,7 +39,11 @@
 		"typescript": "^4.7.2"
 	},
 	"resolutions": {
-		"react-devtools-core": "4.14.0"
+		"react-devtools-core": "4.14.0",
+		"@types/react": "~17.0.21"
+	},
+	"dependenciesComments": {
+		"@types/react": "Resolution because of this issue: https://github.com/react-navigation/react-navigation/issues/10507"
 	},
 	"private": true
 }
