@@ -1,9 +1,12 @@
 import { Center, Heading, HStack, Link, Text, VStack } from 'native-base';
+import { StyleSheet } from 'react-native';
 
 const HomeScreen = (): JSX.Element => (
 	<Center px={4} flex={1}>
 		<VStack space={5} alignItems="center">
-			<Heading size="lg">Welcome to NativeBase</Heading>
+			<Heading size="xl">
+				<Text style={styles.header}>Welcome to NativeBase</Text>
+			</Heading>
 			<HStack space={2} alignItems="center">
 				<Text>Home - HomeScreen.tsx.</Text>
 			</HStack>
@@ -15,5 +18,11 @@ const HomeScreen = (): JSX.Element => (
 		</VStack>
 	</Center>
 );
+
+const styles = StyleSheet.create({
+	header: {
+		fontFamily: 'GreatVibes-Regular',
+	},
+});
 
 export default HomeScreen;
