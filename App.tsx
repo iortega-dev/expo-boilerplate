@@ -1,4 +1,5 @@
 import { extendTheme, NativeBaseProvider } from 'native-base';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Provider } from 'react-redux';
 
 import useCachedResources from './hooks/useCachedResources';
@@ -27,9 +28,11 @@ const App = (): ElementOrNull => {
 
 	return (
 		<Provider store={store}>
-			<NativeBaseProvider theme={theme}>
-				<Navigation />
-			</NativeBaseProvider>
+			<SafeAreaProvider>
+				<NativeBaseProvider theme={theme}>
+					<Navigation />
+				</NativeBaseProvider>
+			</SafeAreaProvider>
 		</Provider>
 	);
 };
